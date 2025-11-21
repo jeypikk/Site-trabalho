@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="240" viewBox="0 0 600 240">
+<defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#6ec3ff"/><stop offset="1" stop-color="#7b8cff"/></linearGradient></defs>
+<rect width="600" height="240" fill="url(#g2)"/>
+<g font-family="Poppins, sans-serif" fill="#fff">
+  <text x="30" y="80" font-size="28" font-weight="700">Doe Sorrisos</text>
+  <text x="30" y="120" font-size="16">Doe roupas, brinquedos e amor</text>
+</g>
+</svg>

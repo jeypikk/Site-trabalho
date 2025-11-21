@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato — Doe Sorrisos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Doe Sorrisos" class="logo"> Doe Sorrisos</a>
+      <nav class="main-nav"><a href="index.html">Início</a><a href="about.html">Sobre</a><a href="campaigns.html">Campanhas</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Fale conosco</h1>
+    <p>Tem dúvidas ou quer se voluntariar? Envie uma mensagem.</p>
+    <form id="contactForm">
+      <label>Nome <input name="name" required></label>
+      <label>E-mail <input name="email" type="email" required></label>
+      <label>Mensagem <textarea name="message" rows="5" required></textarea></label>
+      <div class="form-actions"><button class="btn btn-primary">Enviar</button></div>
+      <p id="contactMsg" class="form-msg"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2025 Doe Sorrisos</p></div></footer>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doe Sorrisos — Doe para crianças</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Doe Sorrisos" class="logo"> <span>Doe Sorrisos</span></a>
+      <nav class="main-nav">
+        <a href="about.html">Sobre</a>
+        <a href="campaigns.html">Campanhas</a>
+        <a href="contact.html">Contato</a>
+        <button id="donateTop" class="btn btn-primary">Quero Doar</button>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(max-width:600px)" srcset="assets/img/hero-small.svg">
+        <img src="assets/img/hero.svg" alt="Crianças sorrindo - Doe Sorrisos" class="hero-img">
+      </picture>
+      <div class="hero-content container">
+        <h1>Transforme um futuro com um gesto ❤️</h1>
+        <p>Doe roupas, brinquedos, material escolar ou contribua com qualquer valor — cada ato conta.</p>
+        <div class="hero-actions">
+          <button id="donateNow" class="btn btn-primary">Doar agora</button>
+          <a href="#how" class="btn btn-ghost">Como funciona</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="container cards-grid">
+      <article class="card">
+        <h2>Como funciona</h2>
+        <p>Selecionamos famílias e instituições parceiras. Todas as doações passam por verificação e são registradas em relatórios públicos.</p>
+      </article>
+      <article class="card">
+        <h2>O que doar</h2>
+        <p>Brinquedos em bom estado, roupas limpas, material escolar e doações financeiras via nosso formulário seguro.</p>
+      </article>
+      <article class="card">
+        <h2>Transparência</h2>
+        <p>Publicamos relatórios mensais com fotos e contas do que foi entregue.</p>
+      </article>
+    </section>
+
+    <section class="container campaigns-preview">
+      <h2>Campanhas em destaque</h2>
+      <div class="carousel" aria-roledescription="carousel">
+        <div class="carousel-track">
+          <div class="slide">
+            <img src="assets/img/escola.jpg" alt="Volta as aulas">
+            <div class="slide-info"><h3>Volta às Aulas</h3><p>Kit escolar para 200 crianças.</p></div>
+          </div>
+          <div class="slide">
+            <img src="assets/img/brinquedo.jpg" alt="brinquedos">
+            <div class="slide-info"><h3>Brinquedos para Sorrisos</h3><p>Recolha e distribuição de brinquedos.</p></div>
+          </div>
+          <div class="slide">
+            <img src="assets/img/agasalho.jpg" alt="Agasalhos">
+            <div class="slide-info"><h3>Inverno Solidário</h3><p>Agasalhos e cobertores.</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="center"><a href="campaigns.html" class="link">Ver todas as campanhas</a></p>
+    </section>
+
+    <section class="container donation-section" id="donation-section">
+      <div class="card form-card">
+        <h2>Formulário de Doação</h2>
+        <p>Preencha os dados abaixo. Esta é uma versão front-end com validação; integre um gateway de pagamento para doações financeiras reais.</p>
+        <form id="donationForm" novalidate>
+          <div class="input-grid">
+            <label>Nome completo <input name="name" type="text" required></label>
+            <label>E-mail <input name="email" type="email" required></label>
+            <label>Telefone <input name="phone" type="tel"></label>
+            <label>Tipo de doação
+              <select name="type" required>
+                <option value="">Escolha...</option>
+                <option value="money">Dinheiro</option>
+                <option value="clothes">Roupas</option>
+                <option value="toys">Brinquedos</option>
+                <option value="school">Material Escolar</option>
+              </select>
+            </label>
+            <label>Valor (se aplicável) <input name="amount" type="number" min="1" placeholder="R$ 50"></label>
+          </div>
+          <label class="full">Mensagem (opcional) <textarea name="message" rows="3"></textarea></label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Enviar Doação</button>
+            <button type="button" id="saveDraft" class="btn btn-ghost">Salvar Rascunho</button>
+          </div>
+          <p id="formMsg" class="form-msg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="container impact">
+      <h2>Nosso impacto</h2>
+      <div class="stats-grid">
+        <div class="stat"><strong>1.235</strong><span>crianças atendidas</span></div>
+        <div class="stat"><strong>48</strong><span>campanhas</span></div>
+        <div class="stat"><strong>3.200+</strong><span>itens doados</span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Doe Sorrisos — Feito com ❤️</p>
+      <div class="footer-links"><a href="#">Política de Privacidade</a> · <a href="#">Transparência</a></div>
+    </div>
+  </footer>
+
+  <div id="donationModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" aria-label="Fechar">✕</button>
+      <h2 id="modalTitle">Doar para Doe Sorrisos</h2>
+      <p>Este formulário simula a doação. Para pagamentos reais, conecte Stripe/PayPal ou outro gateway.</p>
+      <form id="modalForm">
+        <label>Nome completo <input name="mname" required></label>
+        <label>E-mail <input name="memail" type="email" required></label>
+        <label>Valor (R$) <input name="mamount" type="number" min="1" required></label>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Confirmar Doação</button>
+          <button type="button" class="btn btn-ghost modal-close">Cancelar</button>
+        </div>
+        <p id="modalMsg" class="form-msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

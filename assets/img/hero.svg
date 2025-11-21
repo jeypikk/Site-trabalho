@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#6ec3ff"/><stop offset="1" stop-color="#7b8cff"/></linearGradient></defs>
+<rect width="1200" height="360" fill="url(#g)"/>
+<g font-family="Poppins, sans-serif" fill="#fff">
+  <text x="60" y="120" font-size="48" font-weight="700">Doe Sorrisos</text>
+  <text x="60" y="180" font-size="22">Transforme um futuro com um gesto</text>
+</g>
+</svg>
